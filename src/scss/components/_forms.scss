@@ -1,0 +1,118 @@
+// Form styles
+.application-form {
+    @extend .modern-card;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    label {
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border: 2px solid rgba(45, 122, 121, 0.2);
+        border-radius: var(--border-radius);
+        font-family: var(--body-font);
+        font-size: 1rem;
+        transition: var(--transition);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+
+        &:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(45, 122, 121, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    &:last-child {
+        grid-column: 1 / -1;
+    }
+
+    &.focused label {
+        color: var(--primary-dark);
+        transform: scale(0.9) translateY(-5px);
+    }
+}
+
+.how-to-apply {
+    @extend .modern-card;
+
+    ol {
+        counter-reset: step-counter;
+        list-style: none;
+        margin-top: 1.5rem;
+
+        li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(45, 122, 121, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            position: relative;
+            transition: var(--transition);
+
+            &:hover {
+                background: rgba(45, 122, 121, 0.1);
+                transform: translateX(5px);
+            }
+
+            &::before {
+                content: counter(step-counter);
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--gradient-primary);
+                color: var(--secondary-color);
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+// Responsive forms
+@media(max-width: 576px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .application-form {
+        padding: 2rem 1.5rem;
+    }
+}

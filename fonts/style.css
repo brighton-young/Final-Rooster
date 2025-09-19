@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Grold Rounded';
-    src: local('Grold Rounded Slim Extra Bold'), local('Grold-Rounded-Slim-Extra-Bold'),
-        url('GroldRoundedSlim-ExtraBold.woff2') format('woff2'),
-        url('GroldRoundedSlim-ExtraBold.woff') format('woff'),
-        url('GroldRoundedSlim-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-  }
