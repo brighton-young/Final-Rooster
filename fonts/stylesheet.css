@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Geometris Round Thin Semi-Condensed';
+    src: url('GeometrisRound-ThinSemCond.eot');
+    src: local('Geometris Round Thin Semi-Condensed'), local('GeometrisRound-ThinSemCond'),
+        url('GeometrisRound-ThinSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-ThinSemCond.woff2') format('woff2'),
+        url('GeometrisRound-ThinSemCond.woff') format('woff'),
+        url('GeometrisRound-ThinSemCond.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Black Semi-Condensed';
+    src: url('GeometrisRound-BlackSemCond.eot');
+    src: local('Geometris Round Black Semi-Condensed'), local('GeometrisRound-BlackSemCond'),
+        url('GeometrisRound-BlackSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-BlackSemCond.woff2') format('woff2'),
+        url('GeometrisRound-BlackSemCond.woff') format('woff'),
+        url('GeometrisRound-BlackSemCond.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Light Semi-Condensed Oblique';
+    src: url('GeometrisRound-LtSmCnObl.eot');
+    src: local('Geometris Round Light Semi-Condensed Oblique'), local('GeometrisRound-LtSmCnObl'),
+        url('GeometrisRound-LtSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-LtSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-LtSmCnObl.woff') format('woff'),
+        url('GeometrisRound-LtSmCnObl.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometris Round Semi-Condensed Oblique';
+    src: url('GeometrisRound-RgSmCnObl.eot');
+    src: local('Geometris Round Semi-Condensed Oblique'), local('GeometrisRound-RgSmCnObl'),
+        url('GeometrisRound-RgSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-RgSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-RgSmCnObl.woff') format('woff'),
+        url('GeometrisRound-RgSmCnObl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometris Round Semi-Condensed';
+    src: url('GeometrisRound-RegularSemCond.eot');
+    src: local('Geometris Round Semi-Condensed'), local('GeometrisRound-RegularSemCond'),
+        url('GeometrisRound-RegularSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-RegularSemCond.woff2') format('woff2'),
+        url('GeometrisRound-RegularSemCond.woff') format('woff'),
+        url('GeometrisRound-RegularSemCond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Bold Semi-Condensed Oblique';
+    src: url('GeometrisRound-BdSmCnObl.eot');
+    src: local('Geometris Round Bold Semi-Condensed Oblique'), local('GeometrisRound-BdSmCnObl'),
+        url('GeometrisRound-BdSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-BdSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-BdSmCnObl.woff') format('woff'),
+        url('GeometrisRound-BdSmCnObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometris Round Bold Semi-Condensed';
+    src: url('GeometrisRound-BoldSemCond.eot');
+    src: local('Geometris Round Bold Semi-Condensed'), local('GeometrisRound-BoldSemCond'),
+        url('GeometrisRound-BoldSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-BoldSemCond.woff2') format('woff2'),
+        url('GeometrisRound-BoldSemCond.woff') format('woff'),
+        url('GeometrisRound-BoldSemCond.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Medium Semi-Condensed';
+    src: url('GeometrisRound-MediumSemCond.eot');
+    src: local('Geometris Round Medium Semi-Condensed'), local('GeometrisRound-MediumSemCond'),
+        url('GeometrisRound-MediumSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-MediumSemCond.woff2') format('woff2'),
+        url('GeometrisRound-MediumSemCond.woff') format('woff'),
+        url('GeometrisRound-MediumSemCond.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Black Semi-Condensed Oblique';
+    src: url('GeometrisRound-BlkSmCnObl.eot');
+    src: local('Geometris Round Black Semi-Condensed Oblique'), local('GeometrisRound-BlkSmCnObl'),
+        url('GeometrisRound-BlkSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-BlkSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-BlkSmCnObl.woff') format('woff'),
+        url('GeometrisRound-BlkSmCnObl.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometris Round Thin Semi-Condensed Oblique';
+    src: url('GeometrisRound-ThSmCnObl.eot');
+    src: local('Geometris Round Thin Semi-Condensed Oblique'), local('GeometrisRound-ThSmCnObl'),
+        url('GeometrisRound-ThSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-ThSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-ThSmCnObl.woff') format('woff'),
+        url('GeometrisRound-ThSmCnObl.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometris Round Light Semi-Condensed';
+    src: url('GeometrisRound-LightSemCond.eot');
+    src: local('Geometris Round Light Semi-Condensed'), local('GeometrisRound-LightSemCond'),
+        url('GeometrisRound-LightSemCond.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-LightSemCond.woff2') format('woff2'),
+        url('GeometrisRound-LightSemCond.woff') format('woff'),
+        url('GeometrisRound-LightSemCond.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometris Round Medium Semi-Condensed Oblique';
+    src: url('GeometrisRound-MdSmCnObl.eot');
+    src: local('Geometris Round Medium Semi-Condensed Oblique'), local('GeometrisRound-MdSmCnObl'),
+        url('GeometrisRound-MdSmCnObl.eot?#iefix') format('embedded-opentype'),
+        url('GeometrisRound-MdSmCnObl.woff2') format('woff2'),
+        url('GeometrisRound-MdSmCnObl.woff') format('woff'),
+        url('GeometrisRound-MdSmCnObl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
