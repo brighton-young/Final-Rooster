@@ -13,11 +13,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/pages/index.html'),
-        about: resolve(__dirname, 'src/pages/about-services.html'),
-        scholarship: resolve(__dirname, 'src/pages/scholarship.html'),
-        testimonials: resolve(__dirname, 'src/pages/testimonials.html'),
-        contact: resolve(__dirname, 'src/pages/contact-apply.html')
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about-services.html'),
+        scholarship: resolve(__dirname, 'scholarship.html'),
+        testimonials: resolve(__dirname, 'testimonials.html'),
+        contact: resolve(__dirname, 'contact-apply.html')
       }
     },
     outDir: 'dist',

@@ -1,14 +1,26 @@
 // Import custom fonts first
-@import "components/fonts";
+@import 'components/fonts';
 
 // Override Bootstrap variables with our custom theme
-$primary: #2D7A79;
-$secondary: #FFFFFF;
-$light: #FFFBF0;
+$primary: #2d7a79;
+$secondary: #ffffff;
+$light: #fffbf0;
 $dark: #2c3e50;
 
-$font-family-base: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$headings-font-family: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-base:
+  'Geometris Round',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
+$headings-font-family:
+  'Grold Rounded Slim',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
 
 $border-radius: 1.25rem;
 $border-radius-lg: 1.875rem;
@@ -18,17 +30,17 @@ $btn-border-radius: 50px;
 $card-border-radius: $border-radius-lg;
 
 // Import Bootstrap
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
 // Import Bootstrap Icons
-@import "bootstrap-icons/font/bootstrap-icons.scss";
+@import 'bootstrap-icons/font/bootstrap-icons.scss';
 
 // Import our custom styles
-@import "components/variables";
-@import "components/base";
-@import "components/navigation";
-@import "components/hero";
-@import "components/cards";
-@import "components/forms";
-@import "components/animations";
-@import "components/utilities";
+@import 'components/variables';
+@import 'components/base';
+@import 'components/navigation';
+@import 'components/hero';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/animations';
+@import 'components/utilities';

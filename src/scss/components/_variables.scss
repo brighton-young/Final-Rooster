@@ -1,23 +1,28 @@
 // Custom Variables & Design System
 :root {
-    --primary-color: #{$primary};
-    --primary-dark: #1a4746;
-    --primary-light: #a4d0cf;
-    --secondary-color: #{$secondary};
-    --background-color: #{$light};
-    --text-color: #{$dark};
-    --text-light: #6c757d;
-    --accent-color: #f39c12;
-    --success-color: #27ae60;
-    --heading-font: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --body-font: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --shadow-sm: 0 2px 8px rgba(45, 122, 121, 0.08);
-    --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.12);
-    --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.15);
-    --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
-    --gradient-light: linear-gradient(135deg, rgba(255, 251, 240, 0.95) 0%, rgba(255, 251, 240, 0.85) 100%);
-    --border-radius: #{$border-radius};
-    --border-radius-lg: #{$border-radius-lg};
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --section-padding: 120px 0;
+  --primary-color: #{$primary};
+  --primary-dark: #1a4746;
+  --primary-light: #a4d0cf;
+  --secondary-color: #{$secondary};
+  --background-color: #{$light};
+  --text-color: #{$dark};
+  --text-light: #6c757d;
+  --accent-color: #f39c12;
+  --success-color: #27ae60;
+  --heading-font:
+    'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --body-font: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --shadow-sm: 0 2px 8px rgba(45, 122, 121, 0.08);
+  --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.12);
+  --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.15);
+  --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
+  --gradient-light: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.95) 0%,
+    rgba(255, 251, 240, 0.85) 100%
+  );
+  --border-radius: #{$border-radius};
+  --border-radius-lg: #{$border-radius-lg};
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --section-padding: 120px 0;
 }
