@@ -71,6 +71,50 @@ body:not(.loaded) * {
   animation-play-state: paused !important;
 }
 
+// Page transition animations
+@keyframes pageExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Page transition states
+body.page-transitioning {
+  main {
+    animation: pageExit 0.3s ease-in-out forwards;
+  }
+}
+
+body.loaded {
+  main {
+    animation: pageEnter 0.4s ease-out forwards;
+  }
+}
+
+// Improved loading state
+body:not(.loaded) {
+  main {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
 // Performance optimizations
 .hero-section,
 .animate-on-scroll {

@@ -100,6 +100,30 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('loaded');
   });
 
+  // Page transition handling for smooth navigation
+  const pageNavLinks = document.querySelectorAll('a[href*=".html"]');
+
+  pageNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+
+      // Skip if it's the current page
+      if (href === window.location.pathname.split('/').pop()) {
+        e.preventDefault();
+        return;
+      }
+
+      // Add exit animation
+      e.preventDefault();
+      document.body.classList.add('page-transitioning');
+
+      // Navigate after animation
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+
   // Form enhancements
   const formInputs = document.querySelectorAll('input, textarea');
   formInputs.forEach((input) => {
