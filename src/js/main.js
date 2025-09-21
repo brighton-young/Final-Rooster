@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Page transition handling for smooth navigation
   const pageNavLinks = document.querySelectorAll('a[href*=".html"]');
 
-  pageNavLinks.forEach(link => {
+  pageNavLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
 

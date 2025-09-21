@@ -6,6 +6,7 @@
     <title>Contact & Apply - The Reading Roost</title>
     <meta name="description" content="Enroll your child today and begin their journey to educational success with The Reading Roost.">
     <link rel="icon" type="image/png" href="/src/assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
     <script type="module" src="/src/main.js"></script>
@@ -14,7 +15,7 @@
     <header class="main-header">
         <nav class="navbar container">
             <a href="index.html" class="nav-logo">
-                <img src="/src/assets/images/logo.png" alt="The Reading Roost Logo">
+                <img src="/src/assets/images/favicon_edited.jpg" alt="The Reading Roost Logo">
             </a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -33,38 +34,216 @@
         <section id="application" class="content-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Enroll Your Child Today</h2>
-                    <p class="subheading">Let's Begin Their Journey to Success</p>
+                    <h2>Application for Services</h2>
+                    <p class="subheading">Where Every Learner Takes Flight</p>
+                    <p class="text-muted">Families interested in services at The Reading Roost Educational Services should complete this application. This information helps us understand your child's academic, social-emotional, and behavioral needs to create the best individualized plan.</p>
                 </div>
-                <!-- ... (The application-form from previous single-page design) ... -->
+
                 <form class="application-form">
-                    <div class="alert alert-info mb-4" role="alert">
-                        <i class="bi bi-info-circle me-2"></i>
-                        Complete this application to help us understand your child's needs and create the best individualized plan.
+                    <!-- Student Information Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Student Information</h3>
+
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <label for="student-name" class="form-label">Name <span class="text-danger">*</span></label>
+                                <input type="text" id="student-name" name="student-name" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                                <input type="date" id="dob" name="dob" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="number" id="age" name="age" class="form-control" min="3" max="22">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="grade" class="form-label">Grade</label>
+                                <select id="grade" name="grade" class="form-select">
+                                    <option value="">Select Grade</option>
+                                    <option value="pre-k">Pre-K</option>
+                                    <option value="k">Kindergarten</option>
+                                    <option value="1">1st Grade</option>
+                                    <option value="2">2nd Grade</option>
+                                    <option value="3">3rd Grade</option>
+                                    <option value="4">4th Grade</option>
+                                    <option value="5">5th Grade</option>
+                                    <option value="6">6th Grade</option>
+                                    <option value="7">7th Grade</option>
+                                    <option value="8">8th Grade</option>
+                                    <option value="9">9th Grade</option>
+                                    <option value="10">10th Grade</option>
+                                    <option value="11">11th Grade</option>
+                                    <option value="12">12th Grade</option>
+                                    <option value="post-secondary">Post-Secondary</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="school-district" class="form-label">School District</label>
+                                <input type="text" id="school-district" name="school-district" class="form-control" placeholder="Enter school district name">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="iep-504" class="form-label">IEP/504 Plan (if applicable)</label>
+                            <input type="text" id="iep-504" name="iep-504" class="form-control" placeholder="Please describe current IEP or 504 plan details">
+                        </div>
                     </div>
 
-                    <div class="form-grid">
-                        <div class="form-group mb-3">
-                            <label for="student-name" class="form-label">Student Name</label>
-                            <input type="text" id="student-name" name="student-name" class="form-control" required>
-                            <div class="invalid-feedback">Please provide a valid student name.</div>
+                    <!-- Academic Needs Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Academic Needs</h3>
+
+                        <div class="mb-3">
+                            <label class="form-label">Select areas of academic need:</label>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="need-reading" name="academic-needs[]" value="reading">
+                                        <label class="form-check-label" for="need-reading">Reading</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="need-writing" name="academic-needs[]" value="writing">
+                                        <label class="form-check-label" for="need-writing">Writing</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="need-math" name="academic-needs[]" value="math">
+                                        <label class="form-check-label" for="need-math">Math</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="need-other" name="academic-needs[]" value="other">
+                                        <label class="form-check-label" for="need-other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label for="dob" class="form-label">Date of Birth</label>
-                            <input type="date" id="dob" name="dob" class="form-control" required>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="other-academic" class="form-label">If "Other", please specify:</label>
+                                <input type="text" id="other-academic" name="other-academic" class="form-control" placeholder="Specify other academic needs">
+                            </div>
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label for="school-district" class="form-label">School District</label>
-                            <input type="text" id="school-district" name="school-district" class="form-control"
-                                   placeholder="Enter school district name">
+                        <div class="mb-3">
+                            <label for="specific-concerns" class="form-label">Specific concerns:</label>
+                            <textarea id="specific-concerns" name="specific-concerns" rows="4" class="form-control" placeholder="Please describe specific academic challenges or areas of concern..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Behavioral & Social-Emotional Needs Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Behavioral & Social-Emotional Needs</h3>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Does your child have behavioral challenges?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="behavioral-yes" name="behavioral-challenges" value="yes">
+                                    <label class="form-check-label" for="behavioral-yes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="behavioral-no" name="behavioral-challenges" value="no">
+                                    <label class="form-check-label" for="behavioral-no">No</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Does your child have social-emotional needs?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="social-yes" name="social-emotional-needs" value="yes">
+                                    <label class="form-check-label" for="social-yes">Yes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="social-no" name="social-emotional-needs" value="no">
+                                    <label class="form-check-label" for="social-no">No</label>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group mb-4">
-                            <label for="concerns" class="form-label">Specific Academic Concerns</label>
-                            <textarea id="concerns" name="concerns" rows="4" class="form-control"
-                                      placeholder="Describe any specific learning challenges or areas of concern..."></textarea>
+                        <div class="mb-3">
+                            <label for="behavioral-description" class="form-label">If yes to behavioral challenges, please describe:</label>
+                            <textarea id="behavioral-description" name="behavioral-description" rows="3" class="form-control" placeholder="Describe behavioral challenges..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="social-description" class="form-label">If yes to social-emotional needs, please describe:</label>
+                            <textarea id="social-description" name="social-description" rows="3" class="form-control" placeholder="Describe social-emotional needs..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="diagnoses-supports" class="form-label">Diagnoses, supports, or strategies currently in place:</label>
+                            <textarea id="diagnoses-supports" name="diagnoses-supports" rows="4" class="form-control" placeholder="Please describe any current diagnoses, support services, or strategies being used..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Preferred Services Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Preferred Services</h3>
+
+                        <div class="mb-3">
+                            <label class="form-label">Service delivery preference:</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="service-in-person" name="service-preference" value="in-person">
+                                        <label class="form-check-label" for="service-in-person">In-Person</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="service-virtual" name="service-preference" value="virtual">
+                                        <label class="form-check-label" for="service-virtual">Virtual</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="service-blended" name="service-preference" value="blended">
+                                        <label class="form-check-label" for="service-blended">Blended</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Funding Source Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Funding Source</h3>
+
+                        <div class="mb-3">
+                            <label class="form-label">How will services be funded?</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="funding-scholarship" name="funding-source" value="jon-peterson-scholarship">
+                                        <label class="form-check-label" for="funding-scholarship">Jon Peterson Scholarship</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="funding-private" name="funding-source" value="private-pay">
+                                        <label class="form-check-label" for="funding-private">Private Pay</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parent/Guardian Goals Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Parent/Guardian Goals</h3>
+
+                        <div class="mb-3">
+                            <label for="parent-goals" class="form-label">What do you hope your child will gain from services at The Reading Roost?</label>
+                            <textarea id="parent-goals" name="parent-goals" rows="4" class="form-control" placeholder="Please describe your goals and expectations for your child's progress..."></textarea>
                         </div>
                     </div>
 
@@ -105,8 +284,50 @@
         </section>
     </main>
 
-    <footer class="main-footer-bottom">
-        <p>&copy; 2024 The Reading Roost Educational Services. All Rights Reserved.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/src/assets/images/favicon_edited.jpg" alt="The Reading Roost Logo">
+                    <h3>The Reading Roost</h3>
+                    <p>Educational Services</p>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Contact Information</h4>
+                        <p><strong>Robin Rice, PhD (ABD), M.A., B.S.</strong></p>
+                        <p>Licensed Intervention Specialist</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:513-237-8618">513-237-8618</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:robinrice@readingroost.com">robinrice@readingroost.com</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:readingroostedservices@gmail.com">readingroostedservices@gmail.com</a></p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday, 8:00 AM - 4:00 PM</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61579870824978" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://www.linkedin.com/in/robin-rice-58a22890/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                        </div>
+
+                        <div class="footer-certification">
+                            <p><strong>Jon Peterson Provider</strong></p>
+                            <p>Licensed & Registered with Ohio Department of Education & Workforce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Reading Roost Educational Services. All Rights Reserved.</p>
+                <p>Empowering every child to discover the joy of learning</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
