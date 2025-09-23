@@ -50,10 +50,35 @@
   }
 }
 
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
   transition: var(--transition);
+  will-change: transform;
 
   &.in-view {
     opacity: 1;
@@ -116,8 +141,7 @@ body:not(.loaded) {
 }
 
 // Performance optimizations
-.hero-section,
-.animate-on-scroll {
+.hero-section {
   will-change: transform;
 }
 

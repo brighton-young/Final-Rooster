@@ -167,4 +167,55 @@ document.addEventListener('DOMContentLoaded', function () {
     option.style.animationDelay = `${index * 0.1}s`;
     option.classList.add('stagger-fade-in');
   });
+
+  // Image modal functionality
+  function createImageModal() {
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+      <span class="close">&times;</span>
+      <img class="modal-content" src="" alt="Enlarged view">
+    `;
+    document.body.appendChild(modal);
+    return modal;
+  }
+
+  // Initialize image modal
+  const imageModal = createImageModal();
+  const modalImg = imageModal.querySelector('.modal-content');
+  const closeBtn = imageModal.querySelector('.close');
+
+  // Add click handlers to all images (except navbar and footer logos)
+  const clickableImages = document.querySelectorAll(
+    'img:not(.nav-logo img):not(.footer-logo img):not(.hero-logo)'
+  );
+  clickableImages.forEach((img) => {
+    img.classList.add('clickable-image');
+    img.addEventListener('click', () => {
+      imageModal.classList.add('active');
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal functionality
+  function closeModal() {
+    imageModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) {
+      closeModal();
+    }
+  });
+
+  // Close modal with escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 });

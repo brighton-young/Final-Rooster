@@ -18,6 +18,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Center all content by default but with better control
+main {
+  text-align: center;
+}
+
+.content-section,
+section {
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  // Bold text for sections without card backgrounds
+  &:not(.has-cards) {
+    p,
+    li {
+      font-weight: 600;
+    }
+  }
+}
+
+// Reset text alignment for specific elements that should be left-aligned
+.modern-card,
+.testimonial-card,
+form,
+.form-section,
+.application-form,
+.feature-card,
+.step-card,
+.highlight-box {
+  text-align: left;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+  }
+}
+
+// Keep headers centered
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
 h1,
 h2,
 h3,
@@ -86,13 +141,117 @@ img {
   border-radius: var(--border-radius);
 }
 
+// Flyer image size controls
+.enrollment-image,
+.hero-flyer,
+.inline-flyer,
+.roadmap-image {
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin: 1rem auto;
+  display: block;
+}
+
+// Smaller flyers for inline use
+.inline-flyer {
+  max-width: 250px;
+  max-height: 200px;
+  margin: 0.5rem;
+}
+
+// Flyer gallery styling
+.flyer-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+// Enrollment section improvements
+.enrollment-section {
+  padding: 4rem 0;
+}
+
+.enrollment-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.enrollment-flyer {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.enrollment-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+// Scholarship hero section
+.scholarship-hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+// Provider info section
+.provider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.provider-visual {
+  text-align: center;
+}
+
+// Responsive adjustments for flyers
+@media (min-width: 768px) {
+  .enrollment-content {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .enrollment-text {
+    text-align: left;
+  }
+
+  .provider-content {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
 }
 
 .content-section {
-  padding: var(--section-padding);
+  padding: 4rem 0;
   position: relative;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
 }
