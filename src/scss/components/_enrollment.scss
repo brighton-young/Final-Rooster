@@ -1,0 +1,170 @@
+// Enrollment section specific styles - highest priority
+.enrollment-section {
+  text-align: center !important;
+  padding: 4rem 0;
+
+  *,
+  *::before,
+  *::after {
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+
+  .container {
+    text-align: center !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 1rem;
+  }
+
+  .enrollment-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto !important;
+    width: 100%;
+  }
+
+  .enrollment-text {
+    text-align: center !important;
+    max-width: 600px;
+    margin: 0 auto !important;
+    width: 100%;
+
+    h2,
+    h3,
+    h4,
+    p,
+    div,
+    span {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  .enrollment-subtitle {
+    text-align: center !important;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 auto 2rem auto !important;
+  }
+
+  .conditions-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 1.5rem;
+    margin: 2rem auto !important;
+    text-align: center !important;
+    justify-items: center !important;
+    place-items: center !important;
+  }
+
+  .condition-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(45, 122, 121, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(45, 122, 121, 0.2);
+    transition: var(--transition);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      text-align: center !important;
+    }
+
+    span {
+      font-weight: 600;
+      color: var(--primary-color);
+      text-align: center !important;
+    }
+  }
+
+  .enrollment-features {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1.5rem;
+    margin: 2rem auto !important;
+    justify-items: center !important;
+    place-items: center !important;
+  }
+
+  .feature-highlight {
+    text-align: center !important;
+    padding: 1.5rem;
+    background: rgba(255, 251, 240, 0.8);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(45, 122, 121, 0.1);
+    transition: var(--transition);
+    width: 100%;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      text-align: center !important;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: var(--text-color);
+      max-width: none;
+      text-align: center !important;
+    }
+  }
+
+  .enrollment-cta {
+    text-align: center !important;
+    margin-top: 2rem;
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: center !important;
+    }
+
+    .contact-options {
+      display: flex !important;
+      gap: 1rem;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      text-align: center !important;
+    }
+  }
+}
+
+// Additional responsive overrides
+@media (min-width: 768px) {
+  .enrollment-section {
+    .enrollment-content {
+      text-align: center !important;
+    }
+
+    .enrollment-text {
+      text-align: center !important;
+    }
+  }
+}

@@ -9,6 +9,7 @@ This is "The Reading Roost Educational Services" - a modern web application for 
 ## Architecture
 
 This is a modern web application built with:
+
 - **Build System**: Vite with Hot Module Replacement (HMR)
 - **CSS Preprocessing**: Sass/SCSS with modular architecture
 - **JavaScript**: ES6+ modules with Bootstrap integration
@@ -21,6 +22,7 @@ This is a modern web application built with:
 ## Key Design System
 
 The site uses a consistent design system with Bootstrap integration:
+
 - Primary color: `#2D7A79` (teal)
 - Background color for content boxes: `#FFFBF0` (cream)
 - Typography: Poppins (headings), Nunito (body text)
@@ -32,6 +34,7 @@ The site uses a consistent design system with Bootstrap integration:
 
 ```bash
 # Development server with hot reload
+
 npm run dev
 
 # Production build
@@ -50,6 +53,10 @@ npm run format:check
 ```
 
 ## File Structure
+
+# Development server with hot reload
+
+npm run dev
 
 ```
 /
