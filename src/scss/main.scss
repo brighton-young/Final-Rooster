@@ -6,8 +6,20 @@ $primary: #2d7a79;
 $secondary: #ffffff;
 $light: #fffbf0;
 $dark: #2c3e50;
-$font-family-base: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$headings-font-family: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-base:
+  'Geometris Round',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
+$headings-font-family:
+  'Grold Rounded Slim',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
 $border-radius: 1.25rem;
 $border-radius-lg: 1.875rem;
 $btn-border-radius: 50px;
@@ -40,11 +52,35 @@ $card-border-radius: $border-radius-lg;
   --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.12);
   --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.15);
   --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
-  --gradient-light: linear-gradient(135deg, rgba(255, 251, 240, 0.95) 0%, rgba(255, 251, 240, 0.85) 100%);
-  --gradient-colorful-1: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(45, 122, 121, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%);
-  --gradient-colorful-2: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(16, 185, 129, 0.1) 100%);
-  --gradient-colorful-3: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(45, 122, 121, 0.1) 100%);
-  --gradient-colorful-4: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(249, 115, 22, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+  --gradient-light: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.95) 0%,
+    rgba(255, 251, 240, 0.85) 100%
+  );
+  --gradient-colorful-1: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(45, 122, 121, 0.1) 50%,
+    rgba(249, 115, 22, 0.1) 100%
+  );
+  --gradient-colorful-2: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 50%,
+    rgba(16, 185, 129, 0.1) 100%
+  );
+  --gradient-colorful-3: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 50%,
+    rgba(45, 122, 121, 0.1) 100%
+  );
+  --gradient-colorful-4: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1) 0%,
+    rgba(249, 115, 22, 0.1) 50%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
   --border-radius: #{$border-radius};
   --border-radius-lg: #{$border-radius-lg};
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,7 +104,9 @@ body {
     radial-gradient(circle at 70% 90%, rgba(245, 158, 11, 0.05) 0%, transparent 30%),
     url('/src/assets/images/background-texture.jpg') no-repeat center center/cover;
   background-attachment: fixed;
-  font-feature-settings: 'kern' 1, 'liga' 1;
+  font-feature-settings:
+    'kern' 1,
+    'liga' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -96,7 +134,12 @@ body {
 }
 
 // Typography with smart centering
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   font-weight: 700;
@@ -178,12 +221,20 @@ img {
 .step-card,
 .highlight-box,
 .info-card {
-  p, li, text, span:not(.badge) {
+  p,
+  li,
+  text,
+  span:not(.badge) {
     text-align: left;
   }
 
   // But keep headings centered in cards
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: center;
   }
 }
