@@ -1,48 +1,275 @@
 // Import custom fonts first
 @import 'components/fonts';
 
-// Override Bootstrap variables with our custom theme
+// Bootstrap Variables Override
 $primary: #2d7a79;
 $secondary: #ffffff;
 $light: #fffbf0;
 $dark: #2c3e50;
-
-$font-family-base:
-  'Geometris Round',
-  -apple-system,
-  BlinkMacSystemFont,
-  'Segoe UI',
-  Roboto,
-  sans-serif;
-$headings-font-family:
-  'Grold Rounded Slim',
-  -apple-system,
-  BlinkMacSystemFont,
-  'Segoe UI',
-  Roboto,
-  sans-serif;
-
+$font-family-base: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$headings-font-family: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 $border-radius: 1.25rem;
 $border-radius-lg: 1.875rem;
-
-// Override more Bootstrap variables
 $btn-border-radius: 50px;
 $card-border-radius: $border-radius-lg;
 
 // Import Bootstrap
 @import 'bootstrap/scss/bootstrap';
-
-// Import Bootstrap Icons
 @import 'bootstrap-icons/font/bootstrap-icons.scss';
 
-// Import our custom styles
-@import 'components/variables';
-@import 'components/base';
+// Custom Variables with more vibrant colors
+:root {
+  --primary-color: #{$primary};
+  --primary-dark: #1a4746;
+  --primary-light: #a4d0cf;
+  --secondary-color: #{$secondary};
+  --background-color: #{$light};
+  --text-color: #{$dark};
+  --text-light: #6c757d;
+  --accent-color: #f39c12;
+  --success-color: #27ae60;
+  --purple-accent: #8b5cf6;
+  --orange-accent: #f97316;
+  --pink-accent: #ec4899;
+  --blue-accent: #3b82f6;
+  --green-accent: #10b981;
+  --yellow-accent: #f59e0b;
+  --heading-font: #{$headings-font-family};
+  --body-font: #{$font-family-base};
+  --shadow-sm: 0 2px 8px rgba(45, 122, 121, 0.08);
+  --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.12);
+  --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.15);
+  --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
+  --gradient-light: linear-gradient(135deg, rgba(255, 251, 240, 0.95) 0%, rgba(255, 251, 240, 0.85) 100%);
+  --gradient-colorful-1: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(45, 122, 121, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%);
+  --gradient-colorful-2: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(16, 185, 129, 0.1) 100%);
+  --gradient-colorful-3: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(45, 122, 121, 0.1) 100%);
+  --gradient-colorful-4: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(249, 115, 22, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+  --border-radius: #{$border-radius};
+  --border-radius-lg: #{$border-radius-lg};
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Base Styles
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--body-font);
+  background:
+    radial-gradient(circle at 20% 80%, rgba(45, 122, 121, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(164, 208, 207, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 60% 70%, rgba(249, 115, 22, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 10% 30%, rgba(236, 72, 153, 0.06) 0%, transparent 35%),
+    radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.06) 0%, transparent 35%),
+    radial-gradient(circle at 70% 90%, rgba(245, 158, 11, 0.05) 0%, transparent 30%),
+    url('/src/assets/images/background-texture.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+// Remove full-width white backgrounds - let the colorful background show!
+.content-section {
+  padding: 4rem 0;
+  position: relative;
+  // Remove all background colors to show the beautiful texture
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+// Typography with smart centering
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  text-transform: uppercase;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+p {
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+// Section headers should be centered
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+// Text inside cards should be left-aligned for readability
+.modern-card,
+.card,
+.testimonial-card,
+.feature-card,
+.step-card,
+.highlight-box,
+.info-card {
+  p, li, text, span:not(.badge) {
+    text-align: left;
+  }
+
+  // But keep headings centered in cards
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}
+
+// Form content should be left-aligned except labels
+form {
+  text-align: left;
+
+  label {
+    text-align: left;
+  }
+
+  .form-check-label {
+    text-align: left;
+  }
+}
+
+// Contact form headings can be left-aligned as requested
+.contact-apply .form-section h3,
+.application-form .form-section h3,
+.contact-apply .section-title,
+.application-form .section-title {
+  text-align: left;
+}
+
+// Better grid system for centering odd numbers (4th and 7th cards centered)
+.grid-center-odd {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  // For exactly 4 items, make the 4th one centered
+  &.items-4 {
+    grid-template-columns: repeat(3, 1fr);
+
+    > *:nth-child(4) {
+      grid-column: 2;
+      justify-self: center;
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      > *:nth-child(4) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+      }
+    }
+  }
+
+  // For exactly 7 items, make the 7th one centered
+  &.items-7 {
+    grid-template-columns: repeat(3, 1fr);
+
+    > *:nth-child(7) {
+      grid-column: 2;
+      justify-self: center;
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      > *:nth-child(7) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+
+    > * {
+      grid-column: auto !important;
+      justify-self: stretch !important;
+      max-width: none !important;
+    }
+  }
+}
+
+// Import custom components
 @import 'components/navigation';
 @import 'components/hero';
 @import 'components/cards';
 @import 'components/forms';
 @import 'components/footer';
 @import 'components/animations';
-@import 'components/utilities';
-@import 'components/enrollment';
