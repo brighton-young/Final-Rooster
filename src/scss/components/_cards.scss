@@ -784,3 +784,12 @@
     border: 1px solid rgba(16, 185, 129, 0.2);
   }
 }
+
+// Testimonials carousel styles for mobile
+@media (max-width: 768px) {
+  .grid-center-odd.items-4 > * {
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

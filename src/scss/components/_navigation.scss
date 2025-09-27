@@ -126,6 +126,10 @@
 
 // Mobile navigation
 @media (max-width: 992px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -139,6 +143,9 @@
     gap: 0;
     box-shadow: var(--shadow-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0;
+    padding: 0;
+    z-index: 999;
 
     &.active {
       left: 0;
@@ -156,7 +163,16 @@
     }
   }
 
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
   .hamburger {
     display: block;
+    position: relative;
+    z-index: 1001;
   }
 }

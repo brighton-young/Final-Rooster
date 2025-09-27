@@ -168,54 +168,55 @@ document.addEventListener('DOMContentLoaded', function () {
     option.classList.add('stagger-fade-in');
   });
 
-  // Image modal functionality
-  function createImageModal() {
-    const modal = document.createElement('div');
-    modal.className = 'image-modal';
-    modal.innerHTML = `
-      <span class="close">&times;</span>
-      <img class="modal-content" src="" alt="Enlarged view">
-    `;
-    document.body.appendChild(modal);
-    return modal;
-  }
+  // Removed image modal functionality to eliminate footer spacing issues
 
-  // Initialize image modal
-  const imageModal = createImageModal();
-  const modalImg = imageModal.querySelector('.modal-content');
-  const closeBtn = imageModal.querySelector('.close');
+  // Automatic testimonials carousel
+  function initTestimonialsCarousel() {
+    const testimonialsContainers = document.querySelectorAll('.grid-center-odd.items-4');
 
-  // Add click handlers to all images (except navbar and footer logos)
-  const clickableImages = document.querySelectorAll(
-    'img:not(.nav-logo img):not(.footer-logo img):not(.hero-logo)'
-  );
-  clickableImages.forEach((img) => {
-    img.classList.add('clickable-image');
-    img.addEventListener('click', () => {
-      imageModal.classList.add('active');
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-      document.body.style.overflow = 'hidden';
+    testimonialsContainers.forEach(container => {
+      const testimonials = Array.from(container.children);
+
+      if (testimonials.length > 0) {
+        let currentIndex = 0;
+
+        // Hide all except first testimonial initially on mobile
+        function updateCarousel() {
+          if (window.innerWidth <= 768) {
+            testimonials.forEach((testimonial, index) => {
+              testimonial.style.display = index === currentIndex ? 'block' : 'none';
+            });
+          } else {
+            // Show all testimonials on desktop
+            testimonials.forEach(testimonial => {
+              testimonial.style.display = 'block';
+            });
+          }
+        }
+
+        // Auto-rotate testimonials on mobile
+        function rotateTestimonials() {
+          if (window.innerWidth <= 768) {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateCarousel();
+          }
+        }
+
+        // Initialize carousel
+        updateCarousel();
+
+        // Auto-rotate every 4 seconds on mobile
+        const carouselInterval = setInterval(rotateTestimonials, 4000);
+
+        // Update on window resize
+        window.addEventListener('resize', updateCarousel);
+
+        // Store interval for cleanup if needed
+        container._carouselInterval = carouselInterval;
+      }
     });
-  });
-
-  // Close modal functionality
-  function closeModal() {
-    imageModal.classList.remove('active');
-    document.body.style.overflow = '';
   }
 
-  closeBtn.addEventListener('click', closeModal);
-  imageModal.addEventListener('click', (e) => {
-    if (e.target === imageModal) {
-      closeModal();
-    }
-  });
-
-  // Close modal with escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
-      closeModal();
-    }
-  });
+  // Initialize testimonials carousel
+  initTestimonialsCarousel();
 });
