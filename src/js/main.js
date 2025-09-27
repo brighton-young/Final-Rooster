@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function initTestimonialsCarousel() {
     const testimonialsContainers = document.querySelectorAll('.grid-center-odd.items-4');
 
-    testimonialsContainers.forEach(container => {
+    testimonialsContainers.forEach((container) => {
       const testimonials = Array.from(container.children);
 
       if (testimonials.length > 0) {
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
           } else {
             // Show all testimonials on desktop
-            testimonials.forEach(testimonial => {
+            testimonials.forEach((testimonial) => {
               testimonial.style.display = 'block';
             });
           }

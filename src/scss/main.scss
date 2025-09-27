@@ -42,6 +42,8 @@ $card-border-radius: $border-radius-lg;
   --success-color: #27ae60;
   --purple-accent: #8b5cf6;
   --orange-accent: #f97316;
+  --burgundy-accent: #8b1538;
+  --coral-accent: #ff6b6b;
   --pink-accent: #ec4899;
   --blue-accent: #3b82f6;
   --green-accent: #10b981;
@@ -54,8 +56,8 @@ $card-border-radius: $border-radius-lg;
   --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
   --gradient-light: linear-gradient(
     135deg,
-    rgba(255, 251, 240, 0.95) 0%,
-    rgba(255, 251, 240, 0.85) 100%
+    rgba(255, 251, 240, 0.3) 0%,
+    rgba(255, 251, 240, 0.2) 100%
   );
   --gradient-colorful-1: linear-gradient(
     135deg,
@@ -110,6 +112,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+
+  // Fix mobile background scaling issues
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 // Remove full-width white backgrounds - let the colorful background show!
@@ -304,6 +314,14 @@ form {
         max-width: 400px;
       }
     }
+  }
+
+  // For exactly 1 item, center it
+  &.items-1 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   @media (max-width: 768px) {
