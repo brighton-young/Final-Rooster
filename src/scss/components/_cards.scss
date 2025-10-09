@@ -220,8 +220,8 @@
 // Testimonial cards
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .testimonial-card {
@@ -441,17 +441,18 @@
 
   .step-number {
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 2rem;
     background: var(--primary-color);
     color: white;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    font-size: 1.1rem;
     box-shadow: var(--shadow-md);
   }
 

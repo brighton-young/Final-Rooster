@@ -19,7 +19,8 @@
       "Bash(find:*)",
       "Bash(npm run lint)",
       "WebFetch(domain:growtogethertherapy.com)",
-      "WebFetch(domain:lisacoxschoolsolutions.com)"
+      "WebFetch(domain:lisacoxschoolsolutions.com)",
+      "WebFetch(domain:readingroost.com)"
     ],
     "deny": [],
     "ask": []

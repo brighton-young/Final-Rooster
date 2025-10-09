@@ -15,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 // Typography - Consistent Hierarchy
@@ -30,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  text-transform: uppercase;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -305,8 +305,10 @@ section, .content-section {
 // Responsive adjustments
 @media (min-width: 768px) {
   .enrollment-content {
-    flex-direction: row;
+    // Keep column layout for proper centering
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .enrollment-text {
