@@ -1,5 +1,6 @@
-// Custom Variables & Design System
+// Custom Variables & Design System - Standardized for Consistency
 :root {
+  // Primary Colors
   --primary-color: #{$primary};
   --primary-dark: #1a4746;
   --primary-light: #a4d0cf;
@@ -19,20 +20,37 @@
   --olive-green: #879a19;
   --taupe-brown: #9e8e77;
   --blue-gray: #6f90a6;
-  --heading-font:
-    'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  // Typography
+  --heading-font: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --body-font: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --shadow-sm: 0 2px 8px rgba(45, 122, 121, 0.08);
-  --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.12);
-  --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.15);
+
+  // Standardized Opacity/Transparency Levels
+  --opacity-light: 0.05;
+  --opacity-medium-light: 0.1;
+  --opacity-medium: 0.15;
+  --opacity-card-bg: 0.9;
+  --opacity-overlay: 0.95;
+
+  // Shadows - Consistent across all components
+  --shadow-sm: 0 2px 8px rgba(45, 122, 121, 0.1);
+  --shadow-md: 0 8px 30px rgba(45, 122, 121, 0.15);
+  --shadow-lg: 0 20px 60px rgba(45, 122, 121, 0.2);
+
+  // Gradients
   --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
-  --gradient-light: linear-gradient(
-    135deg,
-    rgba(255, 251, 240, 0.95) 0%,
-    rgba(255, 251, 240, 0.85) 100%
-  );
+  --gradient-light: linear-gradient(135deg, rgba(255, 251, 240, 0.15) 0%, rgba(255, 251, 240, 0.1) 100%);
+
+  // Border Radius
   --border-radius: #{$border-radius};
   --border-radius-lg: #{$border-radius-lg};
+
+  // Transitions
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --section-padding: 120px 0;
+
+  // Standardized Spacing
+  --section-padding: 4rem 0;
+  --section-padding-mobile: 2rem 0;
+  --card-padding: 2rem;
+  --card-padding-mobile: 1.5rem;
 }

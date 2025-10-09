@@ -1,21 +1,21 @@
-// Card components
+// Card components - Consistent styling
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
   background: var(--gradient-light);
   backdrop-filter: blur(20px);
-  padding: 2rem;
+  padding: var(--card-padding);
   border-radius: var(--border-radius-lg);
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: var(--card-padding-mobile);
     margin-bottom: 2rem;
   }
 
@@ -25,7 +25,7 @@
     top: 0;
     left: -100%;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: var(--gradient-primary);
     animation: shimmer 3s infinite;
   }
@@ -34,10 +34,10 @@
 .modern-card {
   background: var(--gradient-light);
   backdrop-filter: blur(20px);
-  padding: 2rem;
+  padding: var(--card-padding);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
   transition: var(--transition);
@@ -51,7 +51,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: var(--card-padding-mobile);
     margin: 0.5rem auto;
   }
 
@@ -110,7 +110,7 @@
   text-align: center;
   margin-top: 3rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
   backdrop-filter: blur(10px);
 }
@@ -162,7 +162,7 @@
     li {
       margin-bottom: 0.75rem;
       padding: 0.5rem;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       transition: var(--transition);
 
@@ -491,7 +491,7 @@
 }
 
 .provider-info {
-  background: linear-gradient(135deg, rgba(255, 251, 240, 0.9), rgba(255, 255, 255, 0.95));
+  background: linear-gradient(135deg, rgba(255, 251, 240, 0.1), rgba(255, 255, 255, 0.15));
   padding: 4rem 0;
 
   .provider-card {
@@ -701,5 +701,424 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+// Home page - What is Special Education Section
+.about-sped-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(255, 251, 240, 0.1), rgba(255, 255, 255, 0.15));
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+
+  .sped-explanation {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+  }
+}
+
+// Services Offered Section
+.services-offered-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 251, 240, 0.1));
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.service-card {
+  @extend .modern-card;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--card-padding);
+  position: relative;
+
+  &.featured {
+    background: linear-gradient(135deg, rgba(45, 122, 121, var(--opacity-medium-light)), rgba(255, 251, 240, var(--opacity-overlay)));
+    border: 2px solid var(--primary-color);
+    transform: scale(1.02);
+
+    &::before {
+      height: 6px;
+    }
+  }
+
+  &.coming-soon {
+    opacity: var(--opacity-card-bg);
+    border: 2px dashed var(--primary-color);
+
+    .service-icon {
+      opacity: 0.7;
+    }
+  }
+
+  .service-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+  }
+
+  h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .service-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .service-details {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+
+    li {
+      margin-bottom: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &:hover {
+        background: rgba(45, 122, 121, var(--opacity-medium-light));
+        transform: translateX(5px);
+      }
+
+      i {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .service-note {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(45, 122, 121, 0.2);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+
+    &.featured {
+      transform: scale(1.05) translateY(-8px);
+    }
+
+    .service-icon {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--card-padding-mobile);
+  }
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Learning Aid Ohio Section
+.learning-aid-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(255, 251, 240, 0.1), rgba(255, 255, 255, 0.15));
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
+
+.learning-aid-content {
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.learning-aid-card {
+  @extend .modern-card;
+  padding: var(--card-padding);
+
+  &.featured {
+    border: 2px solid var(--primary-color);
+  }
+
+  .card-icon {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--card-padding-mobile);
+  }
+}
+
+.eligibility-box,
+.how-it-works {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(45, 122, 121, 0.05);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+
+  h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+
+      i {
+        margin-right: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: underline;
+        font-weight: 700;
+
+        &:hover {
+          color: var(--primary-dark);
+        }
+      }
+    }
+  }
+}
+
+.cta-box {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(45, 122, 121, 0.2);
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+// Resources Section
+.resources-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 251, 240, 0.1));
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+
+  h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 3rem 0 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+}
+
+.resources-quick-ref {
+  margin: 3rem 0;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.resource-category {
+  background: var(--gradient-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(45, 122, 121, 0.1);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(45, 122, 121, 0.3);
+  }
+
+  h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i {
+      font-size: 1.3rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+        display: inline-block;
+
+        &:hover {
+          color: var(--primary-color);
+          transform: translateX(5px);
+        }
+
+        &::before {
+          content: '→ ';
+          color: var(--primary-color);
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.resources-comprehensive {
+  margin: 4rem 0 2rem;
+}
+
+.comprehensive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.resource-link {
+  background: var(--gradient-light);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid rgba(45, 122, 121, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    background: rgba(45, 122, 121, 0.1);
+    color: var(--primary-color);
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+  }
+
+  &::after {
+    content: '→';
+    font-size: 1.2rem;
+    transition: var(--transition);
+  }
+
+  &:hover::after {
+    transform: translateX(5px);
   }
 }

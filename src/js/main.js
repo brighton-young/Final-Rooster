@@ -1,8 +1,13 @@
 // Import Bootstrap JavaScript
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+// Import Gallery Module
+import { initGallery } from './gallery.js';
+
 // Modern JavaScript for The Reading Roost
 document.addEventListener('DOMContentLoaded', function () {
+  // Initialize gallery if on services page
+  initGallery();
   // Mobile Navigation
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
@@ -67,10 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (header) {
       if (currentScrollY > 100) {
-        header.style.background = 'rgba(255, 251, 240, 0.98)';
+        header.style.background = 'rgba(255, 251, 240, 0.4)';
         header.style.backdropFilter = 'blur(25px)';
       } else {
-        header.style.background = 'rgba(255, 251, 240, 0.95)';
+        header.style.background = 'rgba(255, 251, 240, 0.3)';
         header.style.backdropFilter = 'blur(20px)';
       }
 

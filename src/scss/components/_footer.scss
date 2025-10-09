@@ -180,9 +180,29 @@
         color: white;
       }
 
-      &:last-child {
+      &:nth-child(2) {
         font-style: italic;
         color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .designer-credit {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.75rem;
+      font-style: normal;
+
+      a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+          color: white;
+          border-bottom-color: white;
+        }
       }
     }
   }
