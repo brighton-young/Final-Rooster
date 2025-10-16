@@ -227,6 +227,7 @@
 .testimonial-card {
   @extend .modern-card;
   position: relative;
+  background: var(--gradient-testimonial); // More transparent background
 
   &::before {
     content: '"';
@@ -368,6 +369,12 @@
 
   .hero-text {
     flex: 1;
+
+    h1,
+    h2,
+    .hero-subtitle {
+      text-align: center; // Always center hero headings
+    }
   }
 
   .hero-highlights {
@@ -438,6 +445,7 @@
   @extend .modern-card;
   position: relative;
   padding: 2rem;
+  overflow: visible; // Override modern-card overflow to show step numbers
 
   .step-number {
     position: absolute;
@@ -454,6 +462,7 @@
     font-weight: bold;
     font-size: 1.1rem;
     box-shadow: var(--shadow-md);
+    z-index: 10; // Ensure numbers are visible on top
   }
 
   h3 {
@@ -759,7 +768,11 @@
   position: relative;
 
   &.featured {
-    background: linear-gradient(135deg, rgba(45, 122, 121, var(--opacity-medium-light)), rgba(255, 251, 240, var(--opacity-overlay)));
+    background: linear-gradient(
+      135deg,
+      rgba(45, 122, 121, var(--opacity-medium-light)),
+      rgba(255, 251, 240, var(--opacity-overlay))
+    );
     border: 2px solid var(--primary-color);
     transform: scale(1.02);
 

@@ -22,7 +22,8 @@
   --blue-gray: #6f90a6;
 
   // Typography
-  --heading-font: 'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading-font:
+    'Grold Rounded Slim', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --body-font: 'Geometris Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   // Standardized Opacity/Transparency Levels
@@ -39,7 +40,16 @@
 
   // Gradients
   --gradient-primary: linear-gradient(135deg, #{$primary} 0%, #1a4746 100%);
-  --gradient-light: linear-gradient(135deg, rgba(255, 251, 240, 0.15) 0%, rgba(255, 251, 240, 0.1) 100%);
+  --gradient-light: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.15) 0%,
+    rgba(255, 251, 240, 0.1) 100%
+  );
+  --gradient-testimonial: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.05) 0%,
+    rgba(255, 251, 240, 0.03) 100%
+  );
 
   // Border Radius
   --border-radius: #{$border-radius};

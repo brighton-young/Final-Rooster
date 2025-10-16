@@ -7,11 +7,21 @@ html {
 body {
   font-family: var(--body-font);
   background:
-    radial-gradient(circle at 20% 80%, rgba(45, 122, 121, var(--opacity-medium-light)) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(164, 208, 207, var(--opacity-medium)) 0%, transparent 50%),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(45, 122, 121, var(--opacity-medium-light)) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(164, 208, 207, var(--opacity-medium)) 0%,
+      transparent 50%
+    ),
     url('/src/assets/images/background-texture.jpg') no-repeat center center/cover;
   background-attachment: fixed;
-  font-feature-settings: 'kern' 1, 'liga' 1;
+  font-feature-settings:
+    'kern' 1,
+    'liga' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-color);
@@ -19,7 +29,12 @@ body {
 }
 
 // Typography - Consistent Hierarchy
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   font-weight: 700;
@@ -88,7 +103,8 @@ img {
   }
 }
 
-section, .content-section {
+section,
+.content-section {
   padding: var(--section-padding);
   text-align: center;
 
@@ -136,7 +152,12 @@ section, .content-section {
 .scholarship-card {
   text-align: left;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: center;
   }
 }

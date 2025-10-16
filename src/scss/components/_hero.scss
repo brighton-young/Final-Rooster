@@ -18,8 +18,16 @@
     right: 0;
     bottom: 0;
     background:
-      radial-gradient(circle at 30% 20%, rgba(45, 122, 121, var(--opacity-medium-light)) 0%, transparent 60%),
-      radial-gradient(circle at 70% 80%, rgba(164, 208, 207, var(--opacity-light)) 0%, transparent 60%);
+      radial-gradient(
+        circle at 30% 20%,
+        rgba(45, 122, 121, var(--opacity-medium-light)) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 70% 80%,
+        rgba(164, 208, 207, var(--opacity-light)) 0%,
+        transparent 60%
+      );
     z-index: -1;
   }
 }

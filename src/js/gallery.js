@@ -15,8 +15,8 @@ export function initGallery() {
   const totalImages = galleryItems.length;
 
   // Get all image sources
-  const imageSources = Array.from(galleryItems).map(item =>
-    item.querySelector('.gallery-image').src
+  const imageSources = Array.from(galleryItems).map(
+    (item) => item.querySelector('.gallery-image').src
   );
 
   // Open lightbox
