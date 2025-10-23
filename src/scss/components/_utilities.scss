@@ -58,6 +58,23 @@
   }
 }
 
+// Reusable Background Classes - Standardized
+.bg-gradient-light {
+  background: linear-gradient(135deg, rgba(255, 251, 240, var(--opacity-medium-light)), rgba(255, 255, 255, var(--opacity-medium)));
+}
+
+.bg-gradient-light-alt {
+  background: linear-gradient(135deg, rgba(255, 255, 255, var(--opacity-medium)), rgba(255, 251, 240, var(--opacity-medium-light)));
+}
+
+.bg-gradient-testimonial {
+  background: linear-gradient(135deg, rgba(255, 251, 240, 0.5), rgba(255, 255, 255, 0.8));
+}
+
+.bg-light-cream {
+  background: linear-gradient(135deg, rgba(255, 251, 240, var(--opacity-medium-light)), rgba(255, 255, 255, var(--opacity-medium)));
+}
+
 // Responsive utilities
 @media (max-width: 1024px) {
   :root {
