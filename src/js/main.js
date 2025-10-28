@@ -15,8 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle mobile menu
   hamburger?.addEventListener('click', () => {
+    const isExpanded = hamburger.classList.contains('active');
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+
+    // Update ARIA attributes for accessibility
+    hamburger.setAttribute('aria-expanded', !isExpanded);
 
     // Prevent body scroll when menu is open
     document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
@@ -63,13 +67,16 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
-  // Smooth header background change on scroll
+  // Optimized scroll handler with throttling using requestAnimationFrame
   const header = document.querySelector('.main-header');
+  const heroSection = document.querySelector('.hero-section');
   let lastScrollY = window.scrollY;
+  let ticking = false;
 
-  window.addEventListener('scroll', () => {
+  function handleScroll() {
     const currentScrollY = window.scrollY;
 
+    // Header background and visibility
     if (header) {
       if (currentScrollY > 100) {
         header.style.background = 'rgba(255, 251, 240, 0.4)';
@@ -79,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         header.style.backdropFilter = 'blur(20px)';
       }
 
-      // Add hide/show header effect
+      // Hide/show header effect
       if (currentScrollY > lastScrollY && currentScrollY > 200) {
         header.style.transform = 'translateY(-100%)';
       } else {
@@ -87,18 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    lastScrollY = currentScrollY;
-  });
-
-  // Parallax effect for hero section
-  const heroSection = document.querySelector('.hero-section');
-  if (heroSection) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * -0.5;
+    // Parallax effect for hero section
+    if (heroSection) {
+      const rate = currentScrollY * -0.5;
       heroSection.style.transform = `translateY(${rate}px)`;
-    });
+    }
+
+    lastScrollY = currentScrollY;
   }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 
   // Add loading animation
   window.addEventListener('load', () => {
@@ -173,54 +190,5 @@ document.addEventListener('DOMContentLoaded', function () {
     option.classList.add('stagger-fade-in');
   });
 
-  // Image modal functionality
-  function createImageModal() {
-    const modal = document.createElement('div');
-    modal.className = 'image-modal';
-    modal.innerHTML = `
-      <span class="close">&times;</span>
-      <img class="modal-content" src="" alt="Enlarged view">
-    `;
-    document.body.appendChild(modal);
-    return modal;
-  }
-
-  // Initialize image modal
-  const imageModal = createImageModal();
-  const modalImg = imageModal.querySelector('.modal-content');
-  const closeBtn = imageModal.querySelector('.close');
-
-  // Add click handlers to all images (except navbar and footer logos)
-  const clickableImages = document.querySelectorAll(
-    'img:not(.nav-logo img):not(.footer-logo img):not(.hero-logo)'
-  );
-  clickableImages.forEach((img) => {
-    img.classList.add('clickable-image');
-    img.addEventListener('click', () => {
-      imageModal.classList.add('active');
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  // Close modal functionality
-  function closeModal() {
-    imageModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  imageModal.addEventListener('click', (e) => {
-    if (e.target === imageModal) {
-      closeModal();
-    }
-  });
-
-  // Close modal with escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
-      closeModal();
-    }
-  });
+  // Image modal removed - gallery.js handles lightbox functionality
 });

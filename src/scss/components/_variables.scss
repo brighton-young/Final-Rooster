@@ -50,6 +50,21 @@
     rgba(255, 251, 240, 0.05) 0%,
     rgba(255, 251, 240, 0.03) 100%
   );
+  --gradient-section-bg: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.1),
+    rgba(255, 255, 255, 0.15)
+  );
+  --gradient-section-bg-alt: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 251, 240, 0.1)
+  );
+  --gradient-section-bg-soft: linear-gradient(
+    135deg,
+    rgba(255, 251, 240, 0.5),
+    rgba(255, 255, 255, 0.8)
+  );
 
   // Border Radius
   --border-radius: #{$border-radius};
