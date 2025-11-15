@@ -10,7 +10,17 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "format": "prettier --write src/**/*.{js,scss,css}",
-    "format:check": "prettier --check src/**/*.{js,scss,css}"
+    "format:check": "prettier --check src/**/*.{js,scss,css}",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:chromium": "playwright test --project=chromium",
+    "test:e2e:mobile": "playwright test --project=mobile-chrome",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:all": "npm run test:run && npm run test:e2e"
   },
   "repository": {
     "type": "git",
@@ -25,18 +35,28 @@
   },
   "homepage": "https://github.com/brighton-young/Final-Rooster#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.56.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-legacy": "^7.2.1",
+    "@vitest/coverage-v8": "^4.0.9",
+    "@vitest/ui": "^4.0.9",
     "eslint": "^9.35.0",
+    "happy-dom": "^20.0.10",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
     "imagemin-webp": "^8.0.0",
+    "jsdom": "^27.2.0",
+    "playwright": "^1.56.1",
     "prettier": "^3.6.2",
     "sass": "^1.92.1",
     "vite": "^7.1.6",
     "vite-plugin-checker": "^0.10.3",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-html-config": "^2.0.2",
-    "vite-plugin-imagemin": "^0.6.1"
+    "vite-plugin-imagemin": "^0.6.1",
+    "vitest": "^4.0.9"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
