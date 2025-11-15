@@ -72,6 +72,37 @@
     text-transform: capitalize;
   }
 
+  .services-badge {
+    background: linear-gradient(135deg, rgba(45, 122, 121, 0.15), rgba(164, 208, 207, 0.15));
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 1.25rem 2rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(45, 122, 121, 0.15);
+    animation: fadeInUp 1s ease-out 0.4s both;
+
+    .badge-line {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--primary-color);
+      margin: 0.5rem 0;
+      line-height: 1.4;
+      font-family: var(--heading-font);
+      
+      strong {
+        font-weight: 700;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -150,6 +181,16 @@
   .tagline {
     font-size: clamp(1rem, 4vw, 1.2rem);
     margin: 0.8rem 0 1.5rem 0;
+  }
+
+  .services-badge {
+    padding: 1rem 1.5rem;
+    margin: 1.25rem auto;
+    border-width: 2px;
+
+    .badge-line {
+      font-size: clamp(0.95rem, 4vw, 1.1rem);
+    }
   }
 
   .hero-buttons {
