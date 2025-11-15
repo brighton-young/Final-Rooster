@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://robinrice@readingroost.com/src/assets/images/reading-roost-hero.png</image:loc>
+      <image:title>The Reading Roost Educational Services</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/about.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/services.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Scholarship Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/scholarship.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/testimonials.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://robinrice@readingroost.com/contact-apply.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
