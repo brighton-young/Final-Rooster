@@ -620,21 +620,21 @@
   }
 }
 
-// Responsive cards
+// Responsive cards - Mobile-First Optimizations
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .about-image {
     order: -1;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
 
     img {
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
     }
   }
 
@@ -644,18 +644,46 @@
 
   .scholarship-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .section-header {
-    padding: 2rem 1.5rem;
-    margin-bottom: 3rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .modern-card,
+  .testimonial-card,
+  .scholarship-card,
+  .service-card,
+  .feature-card,
+  .step-card {
+    padding: 1.5rem 1rem;
+    margin: 0.75rem 0;
+  }
+
+  .scholarship-grid,
+  .services-grid,
+  .testimonials-grid,
+  .features-grid,
+  .steps-grid,
+  .resource-grid {
+    gap: 1.25rem;
+  }
+
+  .service-card .service-icon {
+    font-size: 3rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -665,12 +693,12 @@
   .about-grid,
   .contact-grid,
   .section-header {
-    padding: 2rem 1.5rem;
+    padding: 1.25rem 1rem;
   }
 
   .about-image img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   .service-options {
@@ -680,6 +708,20 @@
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
     }
+  }
+
+  .service-card .service-details li {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .jon-peterson-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .funding-amount {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
   }
 }
 
