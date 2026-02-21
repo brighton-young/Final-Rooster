@@ -2,7 +2,22 @@
   "name": "final",
   "version": "1.0.0",
   "description": "/your-website-folder |-- index.html              (Home Page) |-- about-services.html |-- scholarship.html |-- testimonials.html |-- contact-apply.html |-- style.css               (CSS Styles) |-- script.js               (JavaScript) |-- /images |   |-- logo.png            (Your new chosen logo) |   |-- background-texture.jpg |   |-- robin-rice.jpg |   |-- jon-peterson.jpg |   |-- qr-code.png",
+  "keywords": [],
+  "homepage": "https://github.com/brighton-young/Final-Rooster#readme",
+  "bugs": {
+    "url": "https://github.com/brighton-young/Final-Rooster/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brighton-young/Final-Rooster.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,18 +37,12 @@
     "test:a11y": "playwright test --grep @a11y",
     "test:all": "npm run test:run && npm run test:e2e"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brighton-young/Final-Rooster.git"
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vercel/speed-insights": "^1.3.1",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/brighton-young/Final-Rooster/issues"
-  },
-  "homepage": "https://github.com/brighton-young/Final-Rooster#readme",
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
     "@playwright/test": "^1.56.1",
@@ -57,11 +66,5 @@
     "vite-plugin-html-config": "^2.0.2",
     "vite-plugin-imagemin": "^0.6.1",
     "vitest": "^4.0.9"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "@vercel/speed-insights": "^1.3.1",
-    "bootstrap": "^5.3.8",
-    "bootstrap-icons": "^1.13.1"
   }
 }
