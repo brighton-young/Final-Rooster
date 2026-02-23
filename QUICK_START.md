@@ -136,17 +136,13 @@ The Sass deprecation warnings are normal and won't affect functionality. They're
 
 ## 🚀 Deploy Commands
 
-### **Deploy to GitHub Pages (if using)**
-```bash
-npm run build
-# Then commit and push the dist folder
-```
-
-### **Deploy to Netlify/Vercel**
+### **Deploy to Cloudflare Pages (recommended)**
 ```bash
 # Build command: npm run build
 # Publish directory: dist
 ```
+
+If you previously connected other hosts (GitHub Pages, Netlify, Vercel), disconnect them and keep Cloudflare Pages as the single deployment target to avoid conflicting deployments.
 
 ---
 

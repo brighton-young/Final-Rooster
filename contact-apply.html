@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for Services | Contact Robin Rice - The Reading Roost</title>
+    <!-- deploy-trigger: 2026-02-21T00:00:00Z - CI redeploy trigger -->
     <meta name="description" content="Apply for special education services at The Reading Roost. Complete our application to start IEP support, reading intervention, and math instruction. Serving Ohio families with Jon Peterson Scholarship.">
     <meta name="keywords" content="apply special education services, Jon Peterson application, IEP enrollment Ohio, special education intake form">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -38,9 +39,8 @@
                     <p class="text-muted">Families interested in services at The Reading Roost Educational Services should complete this application. This information helps us understand your child's academic, social-emotional, and behavioral needs to create the best individualized plan.</p>
                 </div>
 
-                <form class="application-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="3c4be61a-76fa-42aa-adf1-eaa5d826bca1">
+                <form class="application-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="3c4be61a-76fa-42aa-adf1-eaa5d826bca1">
                     <!-- Student Information Section -->
                     <div class="form-section mb-5">
                         <h3 class="section-title">Student Information</h3>
@@ -251,7 +251,7 @@
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button type="reset" class="btn btn-outline-secondary me-md-2">Clear Form</button>
                         <button type="submit" class="btn btn-primary">
-                            <i class="bi bi-send me-1"></i> <a href="mailto:brightonhy@gmail.com">Submit Application</a>
+                            <i class="bi bi-send me-1"></i> Submit Application
                         </button>
                     </div>
                 </form>
@@ -277,7 +277,7 @@
                         </p>
                     </div>
                     <div class="contact-qr">
-                        <img src="/src/assets/images/qr-code.png" alt="QR Code to save contact information">
+                        <img src="/src/assets/images/icons/qr.svg" alt="QR Code to save contact information" width="120" height="120">
                         <p>Scan to save contact</p>
                     </div>
                 </div>
@@ -430,9 +430,6 @@
     </footer>
 
     <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <!-- Vercel speed-insights removed to centralize deployments on Cloudflare Pages -->
 </body>
 </html>
