@@ -2,40 +2,46 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import viteImagemin from 'vite-plugin-imagemin';
 
+const isCI = process.env.CI === 'true' || process.env.NETLIFY === 'true';
+
+const imageminPlugin = isCI
+  ? []
+  : [
+      viteImagemin({
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false
+        },
+        optipng: {
+          optimizationLevel: 7
+        },
+        mozjpeg: {
+          quality: 80
+        },
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+              active: false
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false
+            }
+          ]
+        },
+        webp: {
+          quality: 80
+        }
+      })
+    ];
+
 export default defineConfig({
-  plugins: [
-    viteImagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false
-      },
-      optipng: {
-        optimizationLevel: 7
-      },
-      mozjpeg: {
-        quality: 80
-      },
-      pngquant: {
-        quality: [0.8, 0.9],
-        speed: 4
-      },
-      svgo: {
-        plugins: [
-          {
-            name: 'removeViewBox',
-            active: false
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false
-          }
-        ]
-      },
-      webp: {
-        quality: 80
-      }
-    })
-  ],
+  plugins: [...imageminPlugin],
   root: './',
   publicDir: 'public',
   build: {
