@@ -16,16 +16,19 @@
             <a href="index.html" class="nav-logo">
                 <img src="/src/assets/images/reading-roost-logo.png" alt="The Reading Roost Logo">
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">My Services</a></li>
                 <li class="nav-item"><a href="scholarship.html" class="nav-link active">Scholarship</a></li>
                 <li class="nav-item"><a href="contact-apply.html" class="nav-link btn btn-nav">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu" type="button">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="sr-only">Menu</span>
+            </button>
         </nav>
     </header>
 
@@ -68,7 +71,7 @@
 
                         <div class="scholarship-highlights">
                             <div class="highlight-box">
-                                <h3><i class="fas fa-qr-code"></i> Quick Application</h3>
+                                <h3><i class="bi bi-qr-code"></i> Quick Application</h3>
                                 <p>Scan our QR code or call us directly to begin the Jon Peterson Scholarship application process.</p>
                                 <div class="contact-buttons">
                                     <a href="tel:513-237-8618" class="btn btn-primary btn-sm">
@@ -101,14 +104,14 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-user-check"></i>
+                            <i class="bi bi-person-check-fill"></i>
                         </div>
                         <h3>Eligibility</h3>
                         <p>Children from kindergarten through age 21 (and up to age 22 if graduation requirements are unmet) with a finalized IEP generated from their public school district are eligible to apply.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-hand-holding-usd"></i>
+                            <i class="bi bi-cash-coin"></i>
                         </div>
                         <h3>Usage of Funds</h3>
                         <p>Scholarship funds may be used to cover tuition and services at approved private or alternative public providers that implement the child's IEP—or additional services agreed upon by both the provider and family.</p>
@@ -215,7 +218,7 @@
 
                 <div class="renewal-reminder">
                     <div class="reminder-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+                        <i class="bi bi-exclamation-circle-fill"></i>
                     </div>
                     <div class="reminder-text">
                         <strong>Remember:</strong> The scholarship renews each year. Keep your IEP updated so your child can continue receiving services.
@@ -264,7 +267,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="content-section" style="background: linear-gradient(135deg, rgba(255, 251, 240, 0.1), rgba(255, 255, 255, 0.15));">
+        <section id="testimonials" class="content-section bg-gradient-light">
             <div class="container">
                 <div class="section-header">
                     <h2>What Families Are Saying</h2>
@@ -408,6 +411,5 @@
         </div>
     </footer>
 
-    <!-- Speed insights removed; using Cloudflare Pages as canonical host -->
 </body>
 </html>

@@ -75,6 +75,15 @@
   background: linear-gradient(135deg, rgba(255, 251, 240, var(--opacity-medium-light)), rgba(255, 255, 255, var(--opacity-medium)));
 }
 
+.bg-gradient-teal-card {
+  background: linear-gradient(135deg, rgba(45, 122, 121, var(--opacity-medium-light)), rgba(255, 251, 240, var(--opacity-card-bg)));
+  border: 2px solid rgba(45, 122, 121, 0.2);
+}
+
+.bg-gradient-teal-subtle {
+  background: linear-gradient(135deg, rgba(45, 122, 121, var(--opacity-light)), rgba(255, 251, 240, 0.8));
+}
+
 // Responsive utilities
 @media (max-width: 1024px) {
   :root {

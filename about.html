@@ -16,22 +16,25 @@
             <a href="index.html" class="nav-logo">
                 <img src="/src/assets/images/reading-roost-logo.png" alt="The Reading Roost Logo">
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">My Services</a></li>
                 <li class="nav-item"><a href="scholarship.html" class="nav-link">Scholarship</a></li>
                 <li class="nav-item"><a href="contact-apply.html" class="nav-link btn btn-nav">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu" type="button">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="sr-only">Menu</span>
+            </button>
         </nav>
     </header>
 
     <main>
         <!-- Mission Statement Section -->
-        <section class="content-section" style="background: linear-gradient(135deg, rgba(255, 251, 240, 0.1), rgba(255, 255, 255, 0.15));">
+        <section class="content-section bg-gradient-light">
             <div class="container">
                 <div class="section-header text-center">
                     <h2>My Mission</h2>
@@ -107,7 +110,7 @@
                 <!-- Faith and Values -->
                 <div class="row mb-5">
                     <div class="col-12">
-                        <div class="modern-card" style="background: linear-gradient(135deg, rgba(45, 122, 121, 0.05), rgba(255, 251, 240, 0.8));">
+                        <div class="modern-card bg-gradient-teal-subtle">
                             <h3 class="mb-4 text-center">Faith-Guided Mission</h3>
                             <p class="text-center">Throughout my life and career, my faith has been my steady compass, guiding every decision and leading me to the places I've been. Each position I've held, every step I've taken, has been a divine stepping stone, part of God's greater plan for me. Though at times the path wasn't always clear, I've trusted that the Lord's hand was in every decision, every challenge, and every success.</p>
 
@@ -121,7 +124,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="content-section" style="background: linear-gradient(135deg, rgba(255, 251, 240, 0.5), rgba(255, 255, 255, 0.8));">
+        <section id="testimonials" class="content-section bg-gradient-testimonial">
             <div class="container">
                 <div class="section-header">
                     <h2>What Families Are Saying</h2>
@@ -265,10 +268,5 @@
         </div>
     </footer>
 
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-        <!-- Speed insights removed; using Cloudflare Pages as canonical host -->
 </body>
 </html>

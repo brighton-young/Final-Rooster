@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for Services | Contact Robin Rice - The Reading Roost</title>
-    <!-- deploy-trigger: 2026-02-21T00:00:00Z - CI redeploy trigger -->
     <meta name="description" content="Apply for special education services at The Reading Roost. Complete our application to start IEP support, reading intervention, and math instruction. Serving Ohio families with Jon Peterson Scholarship.">
     <meta name="keywords" content="apply special education services, Jon Peterson application, IEP enrollment Ohio, special education intake form">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-  <script type="module" crossorigin src="/assets/contact-BzVjApa7.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-DqC-J7z_.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-Bg68o8Z0.css">
+  <script type="module" crossorigin src="/assets/contact-nnB7e1Vs.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-D5PWZk2A.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-CvPRWLeT.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
@@ -21,20 +20,33 @@
             <a href="index.html" class="nav-logo">
                 <img src="/assets/reading-roost-logo-Dmnv-Ck6.png" alt="The Reading Roost Logo">
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">My Services</a></li>
                 <li class="nav-item"><a href="scholarship.html" class="nav-link">Scholarship</a></li>
                 <li class="nav-item"><a href="contact-apply.html" class="nav-link btn btn-nav active">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu" type="button">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="sr-only">Menu</span>
+            </button>
         </nav>
         </header>
   
     <main>
+        <!-- Success message shown after form submission redirect -->
+        <div id="success-message" class="container py-4" style="display:none;">
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                <div>
+                    <strong>Application submitted successfully!</strong> Robin will review your application and be in touch soon at the email you provided.
+                </div>
+            </div>
+        </div>
+
         <section id="application" class="content-section">
             <div class="container">
                 <div class="section-header">
@@ -45,6 +57,33 @@
 
                 <form class="application-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="3c4be61a-76fa-42aa-adf1-eaa5d826bca1">
+                    <input type="hidden" name="subject" value="New Service Application - The Reading Roost">
+                    <input type="hidden" name="from_name" value="The Reading Roost Website">
+                    <input type="hidden" name="redirect" value="https://readingroost.com/contact-apply.html?success=1">
+                    <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <!-- Parent/Guardian Information Section -->
+                    <div class="form-section mb-5">
+                        <h3 class="section-title">Parent/Guardian Information</h3>
+
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <label for="parent-name" class="form-label">Parent/Guardian Name <span class="text-danger">*</span></label>
+                                <input type="text" id="parent-name" name="parent-name" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="parent-phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="parent-phone" name="parent-phone" class="form-control" placeholder="(555) 555-5555">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="parent-email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" id="parent-email" name="email" class="form-control" required placeholder="your@email.com">
+                            <div class="form-text">We'll use this email to respond to your application.</div>
+                        </div>
+                    </div>
+
                     <!-- Student Information Section -->
                     <div class="form-section mb-5">
                         <h3 class="section-title">Student Information</h3>
@@ -262,7 +301,7 @@
             </div>
         </section>
 
-        <section id="contact" class="content-section" style="padding-top: 0;">
+        <section id="contact" class="content-section pt-0">
             <div class="container">
                 <div class="section-header">
                     <h2>Get in Touch</h2>
@@ -289,7 +328,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="content-section" style="background: linear-gradient(135deg, rgba(255, 251, 240, 0.5), rgba(255, 255, 255, 0.8));">
+        <section id="testimonials" class="content-section bg-gradient-testimonial">
             <div class="container">
                 <div class="section-header">
                     <h2>What Families Are Saying</h2>
@@ -433,10 +472,14 @@
         </div>
     </footer>
 
-    <!-- Vercel Speed Insights -->
-    <!-- Vercel speed-insights removed to centralize deployments on Cloudflare Pages -->
+    <script>
+        if (window.location.search.includes('success=1')) {
+            const msg = document.getElementById('success-message');
+            if (msg) { msg.style.display = 'block'; window.scrollTo(0, 0); }
+        }
+    </script>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy-e2XOiQ9x.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/contact-legacy-DONM5K-9.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/contact-legacy-BlO8YlQk.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 </html>
