@@ -1,13 +1,9 @@
 import { defineConfig } from 'vite';
-import legacy from '@vitejs/plugin-legacy';
 import { resolve } from 'path';
 import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
   plugins: [
-    legacy({
-      targets: ['defaults', 'not IE 11']
-    }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
