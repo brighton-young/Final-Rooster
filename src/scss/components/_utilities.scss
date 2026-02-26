@@ -84,6 +84,27 @@
   background: linear-gradient(135deg, rgba(45, 122, 121, var(--opacity-light)), rgba(255, 251, 240, 0.8));
 }
 
+// Journey section signature
+.journey-signature {
+  padding-top: 0.5rem;
+
+  .signature-regards {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+  }
+
+  .signature-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+}
+
 // Responsive utilities
 @media (max-width: 1024px) {
   :root {
