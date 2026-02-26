@@ -13,3 +13,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-XSS-Protection = "1; mode=block"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    X-Permitted-Cross-Domain-Policies = "none"
