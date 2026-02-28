@@ -22,7 +22,21 @@
       "WebFetch(domain:lisacoxschoolsolutions.com)",
       "WebFetch(domain:readingroost.com)",
       "Bash(git push:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && curl -s \"https://api.github.com/repos/brighton-young/Final-Rooster/commits/master/check-runs\" -H \"Accept: application/vnd.github.v3+json\" 2>/dev/null | python3 -c \"\nimport sys, json\ndata = json.load\\(sys.stdin\\)\nruns = data.get\\('check_runs', []\\)\nif not runs:\n    print\\('No check runs found'\\)\nelse:\n    for r in runs:\n        print\\(f'{r[\\\\\"name\\\\\"]}: {r[\\\\\"status\\\\\"]} / {r[\\\\\"conclusion\\\\\"]}'\\)\n\" 2>/dev/null)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git checkout -b test/verify-netlify-fix 2>&1)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git add netlify.toml && git commit -m \"test: add Permissions-Policy header to verify Netlify build fix\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\" && git push -u origin test/verify-netlify-fix 2>&1)",
+      "Bash(echo curl not available or auth needed:*)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git credential fill <<'EOF'\nprotocol=https\nhost=github.com\nEOF)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git checkout master && git pull origin master 2>&1)",
+      "Bash(cd:*)",
+      "Bash(tail:*)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git checkout -b test/check-netlify-2 && git push -u origin test/check-netlify-2 2>&1)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git add netlify.toml && git commit -m \"test: add security header to trigger Netlify check\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\" && git push 2>&1)",
+      "Bash(cd /c/Users/brigh/.claude-worktrees/Final/beautiful-goldberg && git pull origin master 2>&1)"
     ],
     "deny": [],
     "ask": []
